@@ -5,11 +5,11 @@ $kelasArr = json_decode($_POST["kelas"]);
 
 include "koneksi.php";
 
-for ($nimArr as $item) {
-if(($nimArr[$item] != "")){ 
+for ($i = 0; $i < count($nimArr); $i++) {
+if(($nimArr[$i] != "")){ 
 $sql="INSERT INTO data (nim, nama, kelas)
 VALUES
-('$nimArr[$item]','$namaArr[$item]','$kelasArr[$item]')";
+('$nimArr[$i]','$namaArr[$i]','$kelasArr[$i]')";
 
 if (!mysqli_query($con,$sql))
 {
@@ -18,6 +18,6 @@ die('Error: ' . mysqli_error($con));
 }
 }
 Print "Data Berhasil Ditambahkan !";
-//header("Location: view.php"); //gara2 ini bang errornya
+//header("Location: view.php"); ini errornya
 mysqli_close($con);
 ?>
