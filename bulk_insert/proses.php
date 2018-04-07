@@ -18,6 +18,6 @@ die('Error: ' . mysqli_error($con));
 }
 }
 Print "Data Berhasil Ditambahkan !";
-header("Location: view.php"); //gara2 ini bang errornya
+//header("Location: view.php"); //gara2 ini bang errornya
 mysqli_close($con);
 ?>
