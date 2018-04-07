@@ -51,7 +51,7 @@
 <th>Nim</th>
 <th>Nama</th>
 <th>Kelas</th>
-<th>Action</th>
+<th>Aksi</th>
 <tr>
 </tbody>
 </table>
@@ -59,14 +59,14 @@
 $(document).ready(function() {
 var id = 1; 
 
-$("#btnAdd").click(function() {
+$("#btnAdd").click(function(e) {
 	var newid = id++; 
 	$("#table1").append('<tr valign="top" id="'+newid+'">\n\
 	<td>' + newid + '</td>\n\
 	<td class="nim'+newid+'">' + $("#nim").val() + '</td>\n\
 	<td class="nama'+newid+'">' + $("#nama").val() + '</td>\n\
 	<td class="kelas'+newid+'">' + $("#kelas").val() + '</td>\n\
-	<td><a href="javascript:void(0);" class="remCF">Remove</a></td>\n\ </tr>');
+	<td><a href="javascript:void(0);" class="remCF">Hapus</a></td>\n\ </tr>');
 });
 var serializedData = $('#form1').serialize();
 $.ajax({
